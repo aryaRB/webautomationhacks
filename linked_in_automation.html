@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation</title>
+</head>
+<body>
+
+    <style>
+        .container{
+            display: block;
+            width: fit-content;
+            margin: auto;
+            margin-top: 40vh;
+        }
+        .innerbox{
+            display:flex;
+            flex-wrap : wrap;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .btn1{
+            background-color: rgb(9, 100, 9);
+            border-radius: 0.2cm;
+            padding: 8px 8px 8px 8px;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .btn2{
+            background-color: rgb(214, 9, 20);
+            border-radius: 0.2cm;
+            padding: 8px 8px 8px 8px;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+    </style>
+     
+    <div class="container">
+        <h1>LInked in Accept Reject Bot
+        <div class="innerbox">
+          <button id = "btn1" class="btn1">Accept</button>
+          <button id = "btn2"class="btn2">Reject</button>
+       </div>
+   </div>
+
+   <script>
+       let btn1 = document.getElementById('btn1');
+       let btn2 = document.getElementById('btn2');
+        btn1.addEventListener('click',() =>{
+            let automate = document.getElementsByClassName("invitation-card__action-btn artdeco-button artdeco-button--2 artdeco-button--secondary ember-view")
+
+            for (i = 0; i < automate.length ;i++){
+                automate[i].click();
+            }
+        })
+        btn2.addEventListener('click',() =>{
+            let automate = document.getElementsByClassName("invitation-card__action-btn artdeco-button artdeco-button--2 delete artdeco-button--secondary ember-view")  //not modified
+
+            for (i = 0; i < automate.length ;i++){
+                automate[i].click();
+            }
+        })
+
+   </script>
+    
+</body>
+</html>
